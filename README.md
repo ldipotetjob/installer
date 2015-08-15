@@ -13,4 +13,4 @@ de que en un caso es sobre una distro debian y en otro fedora pero la idea es ma
 
 **Tener siempre en cuenta que ademas  partimos que tenemos java instalado,es la base de todo** 
 
-Somos : mojitoverde.blogspot.com visitanos We are : mojitoverde.blogspot.com visit us
+Somos : http://mojitoverde.blogspot.com visitanos We are : http://mojitoverde.blogspot.com visit us

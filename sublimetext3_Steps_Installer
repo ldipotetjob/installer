@@ -1,0 +1,10 @@
+## better than execute an script with sudo privileges do this 3 steps 
+
+##download sublime tar 
+wget http://c758482.r82.cf2.rackcdn.com/sublime_text_3_build_3065_x64.tar.bz2
+
+##  uncompress and move to opt directory 
+sudo tar -vxjf sublime_text_3_build_3065_x64.tar.bz2 -C /opt
+
+## symobolic link for execute sublime 
+sudo ln -s /opt/sublime_text_3/sublime_text /usr/bin/sublime3

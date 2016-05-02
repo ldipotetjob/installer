@@ -1,0 +1,20 @@
+## mount is a very reach command  and even the actual distros do it functionality in an automatic 
+## way , its possible that your system become inestable an you muts recover information via console.
+## Here just dummies info,for more deep process look on manuals.
+
+# con fdisk vemos el dev assigned 
+fdisk –l
+
+#suelo crear el mount point bajo /media/
+mkdir /media/mount_directory
+
+#attach file system to my file system tree 
+
+## an example of dev_assigned could be : /dev/sda2 ,for example
+mount dev_assigned /media/mount_directory
+
+## then you can write o read from /media/mount_directory
+## when fisnih your work 
+umount dev_assigned
+
+note: for get more info about your "usb": dmesg | grep –i "usb" 

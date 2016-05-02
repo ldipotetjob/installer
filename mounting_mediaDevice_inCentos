@@ -18,3 +18,5 @@ mount dev_assigned /media/mount_directory
 umount dev_assigned
 
 note: for get more info about your "usb": dmesg | grep –i "usb" 
+
+**Tener siempre en cuenta que ademas  partimos que tenemos java instalado,es la base de todo** 

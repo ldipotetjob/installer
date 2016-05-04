@@ -1,0 +1,11 @@
+Centos ShortCuts :
+
+ctrl + L -> clear screen
+ctrl + E -> end of line
+ctrl + D -> exit current shell
+ctrl + C -> kill current proccess
+ctrl + Z -> process in suspended backbround
+ctrl + A -> inicio de linea 
+ctrl + alt + f7 -> console mode
+ctrl + alt + f1 -> modo grafico
+startx ->start or restart your graphical desktop

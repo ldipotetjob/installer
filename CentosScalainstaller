@@ -7,7 +7,7 @@ wget http://www.scala-lang.org/files/archive/scala-2.11.7.tgz
 tar xvf scala-2.11.7.tgz
 #move folder to lib directory
 sudo mv scala-2.11.7 /usr/lib
-#create symbolic link,best choice for oru PATH variable 
+#create symbolic link,best choice for our PATH variable 
 sudo ln -s /usr/lib/scala-2.11.7 /usr/lib/scala
 
 #add Scala Directory in current session 

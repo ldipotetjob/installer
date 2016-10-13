@@ -1,15 +1,14 @@
 ## installer
 =========
 
-Script y documentacion de instaladores sobre linux o mac
+Scripts and docs about installers of linux or mac
 
-###Tenemos aqui los siguientes instaladores :
+###We have here the following installers :
 
-Scala en ubuntu, específicamente lo hemos necesitado para el caso en el que trabajamos con el SaaS https://c9.io ,aqui las instalaciones solo pueden ser hechas a través de la consola de ahi lo necesario del script. 
+Scala in Ubuntu,specifically we have need it whe working with the SaaS https://c9.io.
 
-Scala en Centos, para este caso hacemos una instalación Manual, hemos indicado las 2 vías independientemente 
-de que en un caso es sobre una distro debian y en otro fedora pero la idea es mas o menos la misma.
+Scala in Centos, this installation is manually, we have choose two different ways.Any way the idea is the same for **debian** or **fedora**  
 
-**Tener siempre en cuenta que ademas  partimos que tenemos java instalado,es la base de todo** 
+**Java must be installed** 
 
 Somos : http://mojitoverde.blogspot.com visitanos 

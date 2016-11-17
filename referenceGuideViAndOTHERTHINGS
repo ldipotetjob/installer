@@ -1,0 +1,228 @@
+(Esta es una referencia tomada de: http://es.tldp.org/FAQ/vifaq/vi60.html)
+
+6.0 - Guía de Referencia rápida
+
+... significa que se debe especificar algo antes o después del comando, según sea apropiado. Normalmente será un movimiento de cursor o un número de línea
+
+  #  (donde # es un número) Ejecutar el comando siguiente # veces.
+  :  ir a modo ex
+  )  frase siguiente
+  (  frase anterior
+  }  párrafo siguiente
+  {  párrafo anterior
+ ]]  sección siguiente
+ [[  sección anterior
+  0  inicio de línea
+  $  final de línea
+  ^  primer carácter no blanco
+  +  primer carácter de la siguiente línea
+  -  primer carácter de la línea anterior
+(espacio) carácter siguiente
+(retorno) siguiente línea
+  /  buscar hacia adelante
+  ?  buscar hacia atrás
+  %  buscar el complementario del paréntesis, llave o corchete actual 
+  ,  invertir la dirección del último f, F, t, or T 
+  ;  repetir el último f, F, t, or T
+  .  repetir el último comando
+  `  ir a una marca
+  '  ir al principio de una línea con marca
+ ``  volvera la posición anterior a una búsqueda
+ ''  volver al principio de la línea anterior a una búsqueda
+  ~  cambiar un carácter de mayúsculas a minúsculas y viceversa
+  "  almacenar en un registro
+ !!  repetir el último comando de shell
+ >>  indentar
+ <<  de-indentar (hacia la izquierda)
+ >%  indentar hasta el (, [, o { correspondiente
+ <%  de-indentar hasta el (, [, o { correspondiente
+  a  añadir detrás del cursor
+  A  añadir al final de línea
+ ^a  NO USADO
+  b  moverse al principio de la palabra anterior
+  B  moverse al principio de la palabra anterior, ignorando signos de puntuación
+ ^b  página anterior
+  c  cambiar hasta ...  
+  C  cambiar hasta final de línea
+ ^c  finaliza modo inserción. Sin utilizar en modo comando.
+  d  borrar hasta ...  
+  D  borrar hasta final de línea
+ ^d  Desplazamiento hacia abajo de media pantalla. En modo insercion, desplaza
+       hasta la posicion anterior de indentado.
+  e  fin de palabra
+  E  fin de palabra, ignorando puntuación
+ ^e  desplazamiento hacia abajo de una línea
+  f  busca ...  
+  F  busca hacia atrás ...  
+ ^f  página siguiente
+  g  NO USADO
+  G  ...  ir a  [defaults to end of file] 
+ ^g  muestra la línea de estado
+  h  izquierda
+  H  primera línea de la pantalla
+ ^h  en modo inserción, borrar. En modo comando, izquierda
+  i  insertar en la posición del cursor
+  I  insertar en la primera posición no-blanco al principio de línea.
+ ^i  en modo inserción, TAB. En modo comando, NO USADO.
+  j  abajo
+  J  unir la línea siguiente a la línea actual
+ ^j  en modo comando, abajo. En modo inserción crear una línea
+  k  arriba
+  K  NO USADO 
+ ^k  NO USADO
+  l  derecha
+  L  última línea en pantalla
+ ^l  refresca la pantalla
+  m  marcar una posición en un registro
+  M  centro de la pantalla
+ ^m  retorno de carro.
+  n  repetir la última búsqueda
+  N  repetir la última búsqueda, invirtiendo la dirección.
+ ^n  abajo
+  o  abrir línea debajo de la actual
+  O  abrir línea encima de la actual
+ ^o  NO USADO
+  p  pegar debajo de la línea actual
+  P  pegar encima de la línea actual
+ ^p  arriba
+  q  NO USADO 
+  Q  salir y ejecutar el ex
+ ^q  NO USADO
+  r  remplazar el carácter actual
+  R  modo sobreescribir
+ ^r  refrescar pantalla
+  s  sustituir
+  S  sustituir toda la línea
+ ^s  NO USADO
+  t  a ...  
+  T  atras hacia ...  
+ ^t  desplaza al siguiente punto de indentado
+  u  deshacer el último cambio
+  U  deshacer cambios a la línea actual
+ ^u  arriba media pantalla
+  v  NO USADO 
+  V  NO USADO 
+ ^v  NO USADO
+  w  al principio de la siguiente palabra
+  W  principio de la siguiente palabra, ignorando puntuación
+ ^w  en modo comando, NO USADO. En modo inserción, al principio de la
+       palabra anterior.
+  x  borrar el carácter actual
+  X  borrar el carácter enterior
+ ^x  NO USADO
+  y  copiar ...  
+  Y  copiar la línea actual
+ ^y  desplazamiento arriba una línea
+ ZZ  grabar y salir
+ ^z  NO USADO
+6.1 - Comandos del modo EX ( : commando)
+
+(Nota: Esta lista no está completa, son algunos de los comandos más importantes.)
+
+ :r <fich>        leer <fich> dentro del texto.
+ :r !<comando>    ejecutar <comando> y añadir el resultado de la operación al texto.
+ :nr <fich>       leer <fich> en la línea n
+ :!<fich>         ejecutar comando.      
+ :sh              salida a la shell
+ :so <fich>       leer y ejecutar comandos de <fich>
+ :x               grabar y salir
+ :wq              grabar y salir
+ :l1,l2w <file>   grabar desde la línea l1 a la l2  a <file> .  Si no se especifica 
+ fichero, asume el actual.  Si no se especifican l1 y l2 se asume todo el fichero.
+ :w >> <file>     Añadir a <file>. Se pueden utilizar números de línea. 
+ :w!                    Sobreescribir el fichero actual.
+ :q                     salir sin grabar
+ :q!                    salir sin grabar, desestimando los cambios realizados.
+ :e <file>                editar <file> sin dejar el vi
+ :e!                    descartar cambios desde la última grabación. 
+ :n                     editar el siguiente documento.
+ :e +n <file>     editar <file> en la línea n.
+ :n <files>               specifica <files> como nueva lista de ficheros a editar.
+ :args                  muestra la lista de ficheros a editar
+ :rew                   se "rebobina" la lista de ficheros a editar.
+ :map m n               crea una macro macro (cuando se escribe m se traduce a  n) 
+ :map! m n              crea una macro de modo inserción.
+ :unmap m               deshace la macro m
+ :unmap! m              deshace la macro de inserción m
+ :ab <1> <2>    abreviar
+ :unab <1>        des-abreviar <1> 
+ :set <option>    set <option>...
+6.2 - opciones (set)
+
+Se pueden utilizar las abreviaciones entre paréntesis. Sintaxis:
+
+:set <option> <param> (Si se necesita un parámetro) Se pueden especificar múltiples opciones en una línea.
+:set <option>? muestra el valor de la opción.
+:set all muestra el valor de todas las opciones.
+Para opciones que no necesitan un valor, set no<option> la desactiva.
+
+Opción:      Defecto:           Qué hace:
+
+autoindent (ai)     noai               Activa la indentación automática.
+autoprint (ap)      ap                 Muestra los cambios después de la
+				         ejecución de cada comando.
+autowrite (aw)      noaw               Grabación automática 
+					 antes de ejecutar :n ó :!
+beautify (bf)       nobf               Ignora todos los caracteres de control
+					 durante la entrada de texto (excepto
+					 tab, NL y FF) 
+directory= (dir=)   /tmp               Nombre del directorio temporal.
+edcompatible        noedcompatible     Durante las sustituciones, utilizar una
+					 sintaxis compatible con el ed
+errorbells (eb)     errorbells         Emitir un pitido cuando se produce un error.
+exrc (ex)           noexrc             Permite que el fichero .exrc esté
+                                         fuera del directorio HOME
+hardtabs= (ht=)     8                  Especifica el tamaño del TAB.
+ignore case (ic)    noic               Ignora las diferencias entre 
+					 mayúsculas y minúsculas.
+lisp                nolisp             Activa el modo lisp
+list                nolist             Visualiza los TAB y NL
+magic               magic              Activa expresiones regex avanzadas.
+mesg                mesg               Permite que el terminal reciba mensajes.
+number (nu)         nonumber           Visualiza números de línea
+open                open               Permite los modos open y visual
+optimize (opt)      optimize           Optimiza el rendimiento no enviando CR's
+					 cuando visualiza el texto.
+paragraphs= (para=) IPLPPPQPPLIbp      Activa los delimitadores para { y }
+prompt              prompt             Especifica el prompt del modo comando.
+readonly (ro)       noro               No graba si no se especifica !
+redraw              noredraw           Refresca la pantalla cuando se edita.
+remap               remap              Permite "macros anidadas".
+report=             5                  Visualiza cambios si estos afectan a 
+					 más de x líneas.
+scroll              1/2 window         Número de líneas que se 
+					 deben desplazar cuando se indica un 
+					 comando de desplazar hacia abajo (^D).
+					 También especifica el 
+					 número de líneas 
+					 visualizadas por el comando z (que 
+					 mostrará 2*scroll líneas).
+sections=           SHNHH HU           Define las secciones para [[ y ]] 
+shell= (sh=)        /bin/sh            shell por defecto. Utilizará la 
+					 variable de entorno SHELL si 
+					 está definida.
+shiftwidth= (sw=)   8                  Número de caracteres a desplazar 
+					 cuando se utilicen comandos de 
+					 desplazamiento.
+showmatch (sm)      nosm               Muestr el {, }, (, ), [, o ] complementario.
+showmode            noshowmode         Muestra en qué modo estamos.
+slowopen (slow)                        Actualiza la pantalla inmediatamente 
+					 después de la inserción.
+tabstop= (ts=)      8                  Especifica el tamaño de TABstop.
+taglength= (tl=)    0                  Número de caracteres significativos 
+					 para los tags. (0 indica todos).
+tags=               tag, /usr/lib/tags Define el path de los ficheros de tags.
+term=                                  Especifica el tipo de terminal.
+terse               noterse            Muestra mensajes de error breves.
+timeout (to)        timeout            Especifica el timeout para los mapeos de teclado.
+ttytype=                               Especifica el tipo de terminal.
+warn                warn               Muestra mensajes de aviso.
+window= (w=)                           Número de líneas en modo 
+					 visual (de pantalla completa).
+wrapmargin= (wm=)   0                  Especifica el margen derecho.
+wrapscan (ws)       ws                 Hace que las búsquedas sean 
+					 cíclicas (al acabar el fichero 
+					 vuelve a empezar).
+writeany (wa)       nowa               Permite grabar hacia cualquier fichero.
+
+(Esta es una referencia tomada de: http://es.tldp.org/FAQ/vifaq/vi60.html)

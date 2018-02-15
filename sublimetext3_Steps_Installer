@@ -5,3 +5,59 @@
   sudo yum install sublime-text
   
   ref. [Sublime intaller site](http://www.sublimetext.com/docs/3/linux_repositories.html#yum)
+  
+## Complete sublimeText installation(better choice!!) :
+
+Here are the Steps:
+Step 1: Download Sublime: You can either download from their website or use the wget as I did:
+
+$ cd ~/Downloads
+## On 64bit
+$ wget https://download.sublimetext.com/sublime_text_3_build_3143_x64.tar.bz2
+
+Step 2. Extract Sublime package (example to /opt directory)
+You can store Sublime at any place you want. Here, I saved under /opt directory.
+
+## On 64bit
+$ sudo tar -vxjf sublime_text_3_build_3143_x64.tar.bz2 -C /opt
+
+Step 3. Now, let’s make a symbolic link to the installed Sublime3 so that we can run the same from command line
+
+# sudo ln -s /opt/sublime_text_3/sublime_text /usr/bin/sublime3
+
+Step 4. Now, let’s test whether the Sublime3 is installed correctly or not.
+Type sublime3 in command line and it will open up the sublime window.
+
+$ sublime3
+
+Step 5. Create Gnome desktop launcher You can run Sublime3 on desktop by clicking a icon.
+
+$ sudo sublime3 /usr/share/applications/sublime3.desktop
+
+Step 6. Append this and close file. [Adding Icon Sublime to => Applications → Programming]
+
+[Desktop Entry]
+Name=Sublime3
+Exec=sublime3
+Terminal=false
+Icon=/opt/sublime_text_3/Icon/48x48/sublime-text.png
+Type=Application
+Categories=TextEditor;IDE;Development
+X-Ayatana-Desktop-Shortcuts=NewWindow
+
+[NewWindow Shortcut Group]
+Name=New Window
+Exec=sublime -n
+TargetEnvironment=Unity
+
+
+
+ref:https://stackoverflow.com/questions/44861188/how-to-install-sublime-3-on-centos-7-rhel-7
+  
+  
+  
+  
+  
+  
+  
+  

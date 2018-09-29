@@ -1,0 +1,5 @@
+## reference:https://bitsanddragons.wordpress.com/2017/09/25/exfat-support-on-centos-7/
+
+yum install -y http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+
+yum install exfat-utils fuse-exfat

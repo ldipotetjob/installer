@@ -1,6 +1,8 @@
 ## installer
 =========
 
+Making some test with this installer
+
 Scripts and docs about installers of linux or mac
 
 ### We have here the following installers :

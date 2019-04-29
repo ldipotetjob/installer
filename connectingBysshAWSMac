@@ -1,0 +1,8 @@
+# connecting to AWS EC2 instance via ssh from mac
+####### Ami Id structure
+# AMI ID
+# ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server-20190212 (ami-08660f1c6fb6b01e7)
+# In our prevoius Id AMI our user_instance is ubuntu so our statement should be:
+#
+# ssh -i keypairvaluefile.pem ubuntu@image_ip
+###########

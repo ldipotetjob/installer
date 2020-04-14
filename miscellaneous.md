@@ -5,5 +5,9 @@ count elements in a linux directory:
 list only directories in a linux directory:
   . ls -d */
 
-find all lines in a file that contains an specific string pattern in a file.
+find all lines in a file that contains an specific string pattern in a file:
   . grep -nr "was NOT Parsed." /path_for_my_file/.../daemon.log > output.txt
+  
+find  all files than contain an specific pattern of text:
+  . grep -Ril "Posesión" .  # we try to find all files that contain the word "Posesión" in the current directory 
+

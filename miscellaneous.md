@@ -17,3 +17,6 @@
 
 #### copy all files founded in the previous script 
 * find . -type f -size +1k -exec cp {} /path_to_copy_files \;
+
+#### listing element with it's full path
+*  ls -lha $PWD/*

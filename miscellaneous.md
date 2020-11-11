@@ -20,3 +20,4 @@
 
 #### listing element with it's full path
 * find $(pwd) -type f
+* ls -lhat $PWD/*

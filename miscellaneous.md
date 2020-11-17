@@ -21,3 +21,6 @@
 #### listing element with it's full path
 * find $(pwd) -type f
 * ls -lhat $PWD/*
+
+#### renaming files with specific pattern
+* find . -depth -name "*2021.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%2021.html}2020.html"' \; => rename all files *2021.html to  *2020.html

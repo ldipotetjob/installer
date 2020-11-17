@@ -16,6 +16,7 @@
 * find . -type f -size +1k
 
 #### copy all files founded in the previous script 
+*copy all files in current directory >1kB*
 * find . -type f -size +1k -exec cp {} /path_to_copy_files \;
 
 #### listing element with it's full path

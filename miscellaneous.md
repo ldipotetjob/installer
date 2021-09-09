@@ -29,3 +29,9 @@
 
 #### getting ip what url is pointing to  
 * host \<url or domain name\>
+
+#### redirecting standard output and standard error to one file
+* ls -l /bin/usr > ls-output.txt **2>&1**
+
+#### disposing of unwanted output
+* ls -l /bin/usr **2> /dev/null**

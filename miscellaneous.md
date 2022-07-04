@@ -35,3 +35,9 @@
 
 #### disposing of unwanted output
 * ls -l /bin/usr **2> /dev/null**
+
+#### delete all files(type f) o directories(type d) in a path with the exception of specific pattern
+* find . **-type f** ! -name '*.git' -delete 
+* find . **-type d** ! -name '*.git' -delete
+
+

@@ -9,7 +9,7 @@ git rm --cached file_to_remove
 git rm --cached -r directory_to_remove
 ```
 
-Removing unwanted file/folder from remote and keeping in local: 
+Removing unwanted file/folder from remote and keeping it in local: 
 
 ```shell
 ## can be done manually

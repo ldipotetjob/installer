@@ -23,9 +23,16 @@
 * find $(pwd) -type f
 * ls -lhat $PWD/*
 
-#### renaming files with specific pattern
-*above example rename all files[(.) cur dir] \*2021.html to \*2020.html*
+### renaming files with specific pattern (centos)
+*below example rename all files[(.) cur dir] /*2021.html to /*2020.html*
 * find . -depth -name "*2021.html" -exec sh -c 'f="{}"; mv -- "$f" "${f%2021.html}2020.html"' \;
+
+### renaming files in mac terminal with specific pattern with specific directory 
+* example 1: below example rename all files[(.) cur dir] /*.csvval.formatted to /*.csv
+* find . -type f -name "*.csvval.formatted" -exec sh -c 'mv "$1" "${1%.csvval.formatted}.csv"' _ {} \;
+
+* example 2: below example rename all files[(.) cur dir] /*premierfr.csv to /*premier.csv
+* find . -type f -name "*premierfr.csv" -exec sh -c 'mv "$1" "${1%*premierfr.csv}premier.csv"' _ {} \;
 
 #### getting ip what url is pointing to  
 * host \<url or domain name\>
